@@ -6,7 +6,7 @@ services:
 
     mariadb:
       image: mariadb:10.4
-      container_name: wp-mariadb
+      container_name: wp-db
       working_dir: /application
       volumes:
         - .:/application
@@ -20,7 +20,7 @@ services:
 
     webserver:
       image: nginx:alpine
-      container_name: wp-webserver
+      container_name: wp-web
       working_dir: /application
       volumes:
           - .:/application
@@ -33,10 +33,10 @@ services:
 
     php-fpm:
       build: docker/php-fpm
-      container_name: wp-php-fpm
+      container_name: wp-php
       working_dir: /application
       volumes:
         - .:/application
         - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
-        - ./docker/logs/xdebug.log:/var/log/xdebug.log
+        #- ./docker/logs/xdebug.log:/var/log/nginx/xdebug.log
 
