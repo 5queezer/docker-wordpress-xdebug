@@ -1,0 +1,3 @@
+Installation complete!
+
+Run the installation with 'docker-compose up -d'
