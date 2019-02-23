@@ -40,10 +40,10 @@
 	    "docker-compose build"
     ],
     "post-install-cmd": [
-      "cp core/index.php ./index.php",
-	    "cp core/wp-config-sample.php ./wp-config.php",
+      "cp core/index.php public/index.php",
+      "cp core/wp-config-sample.php public/wp-config.php",
       "cat phpdocker/greeting.txt"
-	  ]
+    ]
   },
   "require": {
     "composer/installers": "^v1.3",
