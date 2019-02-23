@@ -42,6 +42,7 @@
     "post-install-cmd": [
       "cp core/index.php public/index.php",
       "cp core/wp-config-sample.php public/wp-config.php",
+      "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)",
       "cat docker/greeting.txt"
     ]
   },

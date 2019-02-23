@@ -6,33 +6,32 @@ services:
 
     mariadb:
       image: mariadb:10.4
-      container_name: hello-mariadb
+      container_name: wp-mariadb
       working_dir: /application
       volumes:
         - .:/application
       environment:
-        - MYSQL_ROOT_PASSWORD=secret
-        - MYSQL_DATABASE=wordpress
-        - MYSQL_USER=user
-        - MYSQL_PASSWORD=password
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       ports:
-        - "8083:3306"
+        - "${MYSQL_PORT}:3306"
 
     webserver:
       image: nginx:alpine
-      container_name: hello-webserver
+      container_name: wp-webserver
       working_dir: /application
       volumes:
           - .:/application
           - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       ports:
-       - "8080:80"
+       - "${HTTP_PORT}:80"
 
     php-fpm:
       build: docker/php-fpm
-      container_name: hello-php-fpm
+      container_name: wp-php-fpm
       working_dir: /application
       volumes:
         - .:/application
         - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
-

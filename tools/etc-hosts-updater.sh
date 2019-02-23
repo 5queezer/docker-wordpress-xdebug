@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Default IP address for host
-ip="127.0.0.1"
+#/ Adds or removes an entry from /etc/hosts. usage:
+#/ 
+#/    add a host:    ./etc-hosts-updater add <hostname> [ip]
+#/ remove a host:    ./etc-hosts-updater remove <hostname>
+
+usage() { grep '^#/' "$0" | cut -c4- ; exit 0 ; }
+if [ "${1:-}" == "" ]; then usage; exit 1; fi
 
 # Hostname to add/remove.
 hostname="$2"
@@ -25,6 +30,7 @@ add() {
     if [ -n "$(grep -P "[[:space:]]$hostname" /etc/hosts)" ]; then
         yell "$hostname, already exists: $(grep $hostname /etc/hosts)";
     else
+        ip="${2:-127.0.0.1}"
         try printf "%s\t%s\n" "$ip" "$hostname" | sudo tee -a "/etc/hosts" > /dev/null;
 
         if [ -n "$(grep $hostname /etc/hosts)" ]; then
