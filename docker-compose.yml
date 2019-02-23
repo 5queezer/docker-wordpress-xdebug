@@ -27,6 +27,9 @@ services:
           - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       ports:
        - "${HTTP_PORT}:80"
+      depends_on: 
+       - mariadb
+       - php-fpm
 
     php-fpm:
       build: docker/php-fpm
@@ -35,3 +38,6 @@ services:
       volumes:
         - .:/application
         - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+        - ./docker/logs/xdebug.log:/var/log/xdebug.log
+        - ./docker/logs/php_access.log:/var/log/nginx/application.access.log
+        - ./docker/logs/php_errors.log:/var/log/nginx/application_php_errors.log
