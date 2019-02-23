@@ -1,15 +1,8 @@
 {
-  "name": "secretsource/wordpress",
+  "name": "5queezer/wordpress",
   "description": "WordPress Sandbox with Composer.",
   "type": "project",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "Secret Source",
-      "email": "web@secret-source.eu",
-      "homepage": "https://secret-source.eu"
-    }
-  ],
+  "authors": [],
   "repositories": [
     {
       "type": "composer",
@@ -36,6 +29,9 @@
     }
   },
   "scripts": {
+    "pre-update-cmd": [
+      "docker-compose build"
+    ],
     "pre-install-cmd": [
 	    "docker-compose build"
     ],
