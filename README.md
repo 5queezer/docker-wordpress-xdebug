@@ -1,5 +1,5 @@
 # docker-wordpress-xdebug
-A dockerized Wordpress environment
+A dockerized Wordpress environment with Xdebug
 
 # prerequisites
 - docker
@@ -10,3 +10,8 @@ A dockerized Wordpress environment
 
 # run
 `docker-compose up -d`
+
+## available ports
+default settings:
+- localhost:8080 - Web server
+- localhost:8083 - MariaDB server
