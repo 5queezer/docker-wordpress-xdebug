@@ -40,7 +40,7 @@
       "cp core/index.php ./index.php",
 	    "cp core/wp-config-sample.php ./wp-config.php",
 	    "docker-compose build",
-      "cat phpdocker/greeting"
+      "cat phpdocker/greeting.txt"
 	  ]
   },
   "require": {
