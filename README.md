@@ -4,6 +4,7 @@ A dockerized Wordpress environment with Xdebug and subsites.
 # prerequisites
 - docker
 - composer
+- sudo
 
 # install
 1. edit the *.env* file to you needs
