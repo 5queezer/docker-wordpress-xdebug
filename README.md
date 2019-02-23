@@ -7,7 +7,7 @@ A dockerized Wordpress environment with Xdebug and subsites.
 - sudo
 
 # install
-1. edit the *.env* file to you needs
+1. `cp .env.sample .env` and edit the *.env* file to you needs
 2. `composer install`
 3. edit db settings in `wp-config.php` in the _public_ folder.
 
