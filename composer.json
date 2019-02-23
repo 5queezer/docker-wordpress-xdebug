@@ -16,12 +16,12 @@
       "url": "https://wpackagist.org"
     },
     {
-       "type": "vcs",
-       "url": "https://github.com/trendwerk/domains"
+      "type": "vcs",
+      "url": "https://github.com/trendwerk/domains"
     },
     {
-       "type": "vcs",
-       "url": "https://github.com/trendwerk/faker"
+      "type": "vcs",
+      "url": "https://github.com/trendwerk/faker"
     }
   ],
   "extra": {
@@ -36,10 +36,12 @@
     }
   },
   "scripts": {
+    "pre-install-cmd": [
+	    "docker-compose build"
+    ],
     "post-install-cmd": [
       "cp core/index.php ./index.php",
 	    "cp core/wp-config-sample.php ./wp-config.php",
-	    "docker-compose build",
       "cat phpdocker/greeting.txt"
 	  ]
   },

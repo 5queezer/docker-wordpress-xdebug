@@ -1,3 +1,4 @@
 .env
 vendor/
 core/
+wp-config.php
