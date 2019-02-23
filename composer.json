@@ -36,10 +36,10 @@
 	    "docker-compose build"
     ],
     "post-install-cmd": [
-      "cp -n public/index.php public/index.php",
       "cp -n public/wp-config-sample.php wp-config.php",
       "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)",
       "tools/env-wpconfig.sh .env wp-config.php",
+      "sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php",
       "cat docker/greeting.txt"
     ]
   },
