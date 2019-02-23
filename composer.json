@@ -25,7 +25,7 @@
     }
   ],
   "extra": {
-    "wordpress-install-dir": "core",
+    "wordpress-install-dir": "public",
     "installer-paths": {
       "vendor/{$vendor}/{$name}": [
         "webdevstudios/cmb2"
@@ -40,8 +40,8 @@
 	    "docker-compose build"
     ],
     "post-install-cmd": [
-      "cp -n core/index.php public/index.php",
-      "cp -n core/wp-config-sample.php wp-config.php",
+      "cp -n public/index.php public/index.php",
+      "cp -n public/wp-config-sample.php wp-config.php",
       "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)",
       "tools/env-wpconfig.sh .env wp-config.php",
       "cat docker/greeting.txt"
