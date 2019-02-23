@@ -43,7 +43,7 @@
       "cp -n core/index.php public/index.php",
       "cp -n core/wp-config-sample.php wp-config.php",
       "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)",
-      "tools/env-wpconfig.sh .env public/wp-config.php",
+      "tools/env-wpconfig.sh .env wp-config.php",
       "cat docker/greeting.txt"
     ]
   },
