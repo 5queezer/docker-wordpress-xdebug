@@ -1,5 +1,5 @@
 # docker-wordpress-xdebug
-A dockerized Wordpress environment with Xdebug and subsites for development. Do not use in production.
+A dockerized Wordpress environment with Xdebug and subsites for development.
 
 # prerequisites
 - docker
