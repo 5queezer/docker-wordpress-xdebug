@@ -37,6 +37,5 @@ services:
       working_dir: /application
       volumes:
         - .:/application
-        - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
-        #- ./docker/logs/xdebug.log:/var/log/nginx/xdebug.log
-
+        - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini:ro
+        - ./docker/logs/:/var/log/nginx/:ro
