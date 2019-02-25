@@ -17,6 +17,8 @@ services:
         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       ports:
         - "${MYSQL_PORT}:3306"
+      volumes:
+        - db_data:/var/lib/mysql
 
     webserver:
       image: nginx:alpine
@@ -36,6 +38,8 @@ services:
       container_name: wp-php
       working_dir: /application
       volumes:
-        - .:/application
+        - .:/application:rw
         - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini:ro
-        - ./docker/logs/:/var/log/nginx/:ro
+
+volumes: 
+  db_data:

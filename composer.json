@@ -34,7 +34,8 @@
       "mv public/wp-config.php wp-config.php || cp -n public/wp-config-sample.php wp-config.php && tools/env-wpconfig.sh .env wp-config.php"
     ],
     "insert-content-dir": [
-      "sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php"
+      "sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php",
+      "sed -i '/define.*WP_DEBUG/a define\\(\"FS_METHOD\", \"direct\"\\);' wp-config.php"
     ],
     "pre-update-cmd": [
       "docker-compose build"
