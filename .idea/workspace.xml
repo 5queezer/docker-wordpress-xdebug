@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c71b8d-7316-4af5-8643-b432b5710a56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/.env.sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/README.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/php-fpm/php-ini-overrides.ini" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/php-ini-overrides.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +19,31 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server host="" id="62572d8c-05cb-4956-a3fa-5eb839607a13" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/application/public" />
+        </path_mappings>
+      </server>
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -48,6 +69,11 @@
             <path>
               <item name="docker-wordpress-xdebug" type="b2602c69:ProjectViewProjectNode" />
               <item name="docker-wordpress-xdebug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-wordpress-xdebug" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-wordpress-xdebug" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -84,18 +110,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551046425456</updated>
-      <workItem from="1551046427188" duration="621000" />
+      <workItem from="1551046427188" duration="2535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621000" />
+    <option name="totallyTimeSpent" value="2535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1032" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -105,7 +131,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31497797" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -117,5 +143,14 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
