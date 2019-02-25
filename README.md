@@ -22,9 +22,9 @@ Directory structure after `composer install`
 │   ├── themes
 │   └── upgrade
 ├── docker
-│   ├── logs
 │   ├── nginx
 │   └── php-fpm
+├── log
 ├── public
 │   ├── wp-admin
 │   ├── wp-content
@@ -34,3 +34,4 @@ Directory structure after `composer install`
     ├── composer
     └── johnpbloch
 ```
+

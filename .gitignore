@@ -1,4 +1,5 @@
 .env
+wp-config.php*
 vendor/
 public/
-wp-config.php*
+log/
