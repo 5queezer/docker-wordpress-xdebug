@@ -37,6 +37,9 @@
       "sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php",
       "sed -i '/define.*WP_DEBUG/a define\\(\"FS_METHOD\", \"direct\"\\);' wp-config.php"
     ],
+    "hostsupdate": [
+      "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)"
+    ],
     "pre-update-cmd": [
       "docker-compose build"
     ],
@@ -46,7 +49,7 @@
     "post-install-cmd": [
       "@move-wp-config",
       "@insert-content-dir",
-      "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)",
+      "@hostsupdate",
       "cat docker/greeting.txt"
     ]
   },
