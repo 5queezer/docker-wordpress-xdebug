@@ -1,3 +1,5 @@
 Installation complete!
 
-Run the installation with 'docker-compose up -d'
+Run composer wp-config-update to load the values from the .env file and overwrite the old one. Please make a backup of wp-config.php first!
+
+Start the application with 'docker-compose up -d'

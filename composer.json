@@ -29,15 +29,12 @@
     }
   },
   "scripts": {
-    "move-wp-config": [
-      "[ -f wp-config.php ] && mv -u wp-config.php wp-config.php.bak || true",
-      "mv public/wp-config.php wp-config.php || cp -n public/wp-config-sample.php wp-config.php && tools/env-wpconfig.sh .env wp-config.php"
+    "wp-config-update": [
+      "mv public/wp-config.php wp-config.php || cp -n public/wp-config-sample.php wp-config.php && tools/env-wpconfig.sh .env wp-config.php",
+      "! grep WP_CONTENT_DIR wp-config.php && sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php || true",
+      "! grep FS_METHOD wp-config.php      && sed -i '/define.*WP_DEBUG/a define\\(\"FS_METHOD\", \"direct\"\\);' wp-config.php || true"
     ],
-    "insert-content-dir": [
-      "sed -i '/define.*WP_DEBUG/a define\\(\"WP_CONTENT_DIR\", dirname\\(__FILE__\\) . \"/content\"\\);' wp-config.php",
-      "sed -i '/define.*WP_DEBUG/a define\\(\"FS_METHOD\", \"direct\"\\);' wp-config.php"
-    ],
-    "hostsupdate": [
+    "hosts-update": [
       "tools/etc-hosts-updater.sh add $(tools/env-read-var.sh HOST_NAME .env)"
     ],
     "pre-update-cmd": [
@@ -47,9 +44,8 @@
 	    "docker-compose build"
     ],
     "post-install-cmd": [
-      "@move-wp-config",
-      "@insert-content-dir",
-      "@hostsupdate",
+      "@wp-config-update",
+      "@hosts-update",
       "cat docker/greeting.txt"
     ]
   },
