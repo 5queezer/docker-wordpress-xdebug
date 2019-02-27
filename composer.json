@@ -9,12 +9,8 @@
       "url": "https://wpackagist.org"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/trendwerk/domains"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/trendwerk/faker"
+      "type": "git",
+      "url": "git@github.com:trendwerk/faker.git"
     }
   ],
   "extra": {

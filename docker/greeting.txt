@@ -1,5 +1,6 @@
 Installation complete!
 
-Run composer wp-config-update to load the values from the .env file and overwrite the old one. Please make a backup of wp-config.php first!
+1. Run `composer wp-config-update` to load the values from the .env file and overwrite the old one. Please make a backup of wp-config.php first! 
+   When this file is found in public/, it will be moved to the root level.
 
-Start the application with 'docker-compose up -d'
+2. Start the application with `docker-compose up -d`

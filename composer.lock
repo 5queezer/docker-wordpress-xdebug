@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8b66110421aff190e4ce174f304b932",
+    "content-hash": "a5f0cb984a2381228cbfedcbdeda6025",
     "packages": [
         {
             "name": "composer/installers",
@@ -266,9 +266,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-meta-data.1.0.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/debug-meta-data.1.0.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -286,9 +284,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-wp-redirect.1.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/debug-wp-redirect.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -306,9 +302,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/post-meta-inspector.1.1.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/post-meta-inspector.1.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -326,9 +320,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/post-meta-manager.1.0.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/post-meta-manager.1.0.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -346,9 +338,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/whats-running.1.9.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/whats-running.1.9.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -366,9 +356,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentyseventeen.1.9.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/theme/twentyseventeen.1.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
