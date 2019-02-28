@@ -23,7 +23,7 @@ services:
       working_dir: /application
       volumes:
           - .:/application
-          - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+          - ./docker/nginx/nginx-wp.conf:/etc/nginx/conf.d/default.conf
       ports:
        - ${HTTP_PORT}:80
       depends_on: 
@@ -43,6 +43,18 @@ services:
         - ${WEBGRIND_PORT}:80
       volumes:
         - ./log:/tmp/xdebug:rw
+      restart: always
+
+    profiler-gui:
+      image: nginx:alpine
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./docker/nginx/nginx-profiler.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - ${PROFILER_GUI_PORT}:80
+      depends_on: 
+       - php-fpm
 
 volumes: 
   db_data:
