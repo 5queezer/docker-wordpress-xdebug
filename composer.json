@@ -42,6 +42,8 @@
     "post-install-cmd": [
       "@wp-config-update",
       "@hosts-update",
+      "git clone https://github.com/corretge/xdebug-trace-gui",
+      "git clone https://github.com/splitbrain/xdebug-trace-tree",
       "cat docker/greeting.txt"
     ]
   },
