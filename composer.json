@@ -44,6 +44,7 @@
       "@hosts-update",
       "git clone https://github.com/corretge/xdebug-trace-gui",
       "git clone https://github.com/splitbrain/xdebug-trace-tree",
+      "git clone git@github.com:tungnguyenson/xdebug-trace-explorer.git",
       "cat docker/greeting.txt"
     ]
   },
